@@ -1,0 +1,28 @@
+.gridExemplo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 1fr 1fr */
+    grid-template-rows: repeat(2, 1fr); /* 1fr 1fr */
+    grid-template-areas: "redDiv greenDiv" "blueDiv yellowDiv";
+    width: 300px;
+}
+
+.gridExemplo div {
+    width: 150px;
+    height: 150px;
+}
+
+.gridExemplo div:nth-child(1) {
+    grid-area: redDiv;
+}
+
+.gridExemplo div:nth-child(2) {
+    grid-area: greenDiv;
+}
+
+.gridExemplo div:nth-child(3) {
+    grid-area: blueDiv;
+}
+
+.gridExemplo div:nth-child(4) {
+    grid-area: yellowDiv;
+}

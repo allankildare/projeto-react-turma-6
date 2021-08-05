@@ -1,0 +1,20 @@
+.App {
+    display: grid;
+    grid-template-rows: 10vh 83vh 7vh;
+    grid-template-areas: "header" "main" "footer";
+}
+
+.App header {
+    background-color: rgb(69, 98, 224);
+    grid-area: header;
+}
+
+.main {
+    background-color: rgb(226, 141, 62);
+    grid-area: main;
+}
+
+.App footer {
+    background-color: rgb(65, 228, 114);
+    grid-area: footer;
+}
