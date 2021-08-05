@@ -4,7 +4,7 @@ class Header extends Component {
     render() {
         return (
             <header>
-                Aqui teremos o header
+                Header
             </header>
         )
     }
