@@ -1,0 +1,54 @@
+.gridInterno {
+    display: grid;
+    /* deixar a largura menor que 100% gera as margens laterais que vemos no bons drinks - usar sempre o mesmo número nos componentes que entram na area de conteudo */
+    width: 80%;
+    margin: 0 auto;
+    justify-self: center;
+    grid-template-areas: "titulo titulo" "imagem form";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 90px 1fr;
+    gap: 20px;
+}
+
+/* titulo ocupa as duas colunas */
+
+.titulo {
+    grid-area: titulo;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* alinhamos as duas classes abaixo para o início do grid-item */
+
+.col2img {
+    margin-block-start: 0;
+    grid-area: imagem;
+    max-width: 100%;
+    align-self: start;
+    object-fit: cover;
+    max-height: 400px;
+    width: 550px;
+    border-radius: 5px;
+}
+
+.formContent {
+    grid-area: form;
+    align-self: start;
+    display: block;
+    width: 100%;
+}
+
+.meuInput {
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+}
+
+.meuBotao {
+    width: 80px;
+    padding: 5px 20px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #ddd255;
+    border: 1px solid #cccccc;
+}
