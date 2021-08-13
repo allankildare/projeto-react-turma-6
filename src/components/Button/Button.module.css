@@ -12,3 +12,7 @@
 .btn:hover, .btn:focus, .active {
     background: #f9ae48;
 }
+
+.btn:disabled {
+    background-color: #b1b1b1;
+}
