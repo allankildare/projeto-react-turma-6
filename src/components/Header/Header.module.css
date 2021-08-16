@@ -1,0 +1,21 @@
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.menu li {
+    font-size: 26px;
+    cursor: pointer;
+    transition: .4s ease color;
+}
+
+.menu li:hover {
+    color: #f9ae48;
+}
+
+.menu li.logo {
+    font-family: 'Bilbo Swash Caps', cursive;
+    font-size: 36px;
+}
