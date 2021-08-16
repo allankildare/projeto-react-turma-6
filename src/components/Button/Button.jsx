@@ -11,7 +11,6 @@ class Button extends Component {
     }
 
     meuClique() {
-        console.log('Fui clicado!')
         this.setState({ disabled: true })
         
         setTimeout(() => {
@@ -20,7 +19,6 @@ class Button extends Component {
     }
 
     render() {
-        console.log('Renderizei')
         return (
             <button disabled={this.state.disabled}
                 className={style.btn}
