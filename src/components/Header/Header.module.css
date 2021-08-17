@@ -5,17 +5,18 @@
     list-style: none;
 }
 
-.menu li {
+.menu a, .menu a:visited {
     font-size: 26px;
-    cursor: pointer;
     transition: .4s ease color;
+    text-decoration: none;
+    color: rgb(10, 10, 10);
 }
 
-.menu li:hover {
+.menu a:hover {
     color: #f9ae48;
 }
 
-.menu li.logo {
+.menu a.logo {
     font-family: 'Bilbo Swash Caps', cursive;
     font-size: 36px;
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import style from './Header.module.css'
+import { Link } from 'react-router-dom'
 
 class Header extends Component {
     render() {
@@ -7,11 +8,11 @@ class Header extends Component {
             <header>
                 <nav>
                     <ul className={style.menu}l>
-                        <li>Drinks</li>
-                        <li>Sobre nós</li>
-                        <li className={style.logo}>Bons Drinks</li>
-                        <li>Nosso time</li>
-                        <li>Contato</li>
+                        <Link to="/drinks">Drinks</Link>
+                        <Link to="sobre-nos">Sobre nós</Link>
+                        <Link to="/" className={style.logo}>Bons Drinks</Link>
+                        <Link to="nosso-time">Nosso time</Link>
+                        <Link to="/contato">Contato</Link>
                     </ul>
                 </nav>
             </header>
