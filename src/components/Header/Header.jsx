@@ -7,12 +7,12 @@ class Header extends Component {
         return (
             <header>
                 <nav>
-                    <ul className={style.menu}l>
-                        <Link to="/drinks">Drinks</Link>
-                        <Link to="sobre-nos">Sobre nós</Link>
-                        <Link to="/" className={style.logo}>Bons Drinks</Link>
-                        <Link to="nosso-time">Nosso time</Link>
-                        <Link to="/contato">Contato</Link>
+                    <ul className={style.menu}>
+                        <li><Link to="/drinks">Drinks</Link></li>
+                        <li><Link to="sobre-nos">Sobre nós</Link></li>
+                        <li><Link to="/" className={style.logo}>Bons Drinks</Link></li>
+                        <li><Link to="nosso-time">Nosso time</Link></li>
+                        <li><Link to="/contato">Contato</Link></li>
                     </ul>
                 </nav>
             </header>
