@@ -1,3 +1,8 @@
+:root {
+  --header-footer-bg: #1c1c1c;
+  --white: #ededed;
+}
+
 *{
   margin: 0;
   padding: 0;
