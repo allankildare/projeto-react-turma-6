@@ -13,6 +13,5 @@
 }
 
 .App footer {
-    background-color: #fffbef;
     grid-area: footer;
 }

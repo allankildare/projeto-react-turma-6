@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import style from './Footer.module.css'
+import { FooterStyled } from './styles'
 
 class Form extends Component {
     render() {
         return (
-            <footer className={style.footer}>
+            <FooterStyled>
                 Resilia 2021 - Alguns direitos reservados
-            </footer>
+            </FooterStyled>
         )
     }
 }
