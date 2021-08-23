@@ -4,6 +4,7 @@ import Header from './components/Header/Header'
 import Form from './components/Form/Form'
 import Footer from './components/Footer/Footer'
 import Drinks from './components/Drinks/Drinks'
+import Main from './components/Main/Main'
 import { 
   BrowserRouter as Router,
   Switch,
@@ -18,7 +19,7 @@ class App extends Component {
 
           <Switch>
             <Route path="/" exact>
-              <h1>Página inicial</h1>
+              <Main />
             </Route>
             <Route path="/drinks" children={<Drinks />} />
             <Route path="/sobre-nos" children={<h1>Sobre nós</h1>} /> 
