@@ -9,6 +9,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route } from 'react-router-dom'
+import AboutUs from './components/AboutUs/AboutUs'
 
 class App extends Component {
   render() {
@@ -22,7 +23,9 @@ class App extends Component {
               <Main />
             </Route>
             <Route path="/drinks" children={<Drinks />} />
-            <Route path="/sobre-nos" children={<h1>Sobre nós</h1>} /> 
+            <Route path="/sobre-nos">
+              <AboutUs />  
+            </Route> 
             <Route path="/nosso-time">
               <h1>Nosso time</h1>
             </Route>

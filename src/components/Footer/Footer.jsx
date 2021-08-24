@@ -1,14 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { FooterStyled } from './styles'
 
-class Form extends Component {
-    render() {
-        return (
-            <FooterStyled>
-                Resilia 2021 - Alguns direitos reservados
-            </FooterStyled>
-        )
-    }
+function Footer() {
+    return (
+        <FooterStyled>
+            Resilia 2021 - Alguns direitos reservados
+        </FooterStyled>
+    )
 }
 
-export default Form
+export default Footer

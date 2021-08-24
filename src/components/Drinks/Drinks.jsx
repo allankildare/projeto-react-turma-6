@@ -1,39 +1,36 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 
-class Drinks extends Component {
-    constructor(props) {
-        super(props)
-        this.url = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail'
-        this.state = {
-            dados: [],
-        }
-    }
+const Drinks = () => {
+    const url = 'https://www.thecocktaildb.com/api/json/v1/1/random.php'
+    const [reqDrinks, setReqDrinks] = useState([])
 
-    render() {
-        return (
-            <div>
-                <h1>Drinks</h1>
-                <ul>
-                    {this.state.dados.length < 100 ?
-                        'Carregando...' : 
-                        this.state.dados.map((item) => {
-                        return <li key={item.idDrink}>
-                            <img src={item.strDrinkThumb} alt={`Imagem do drink ${item.strDrink}`} width="100px" />
-                            {item.strDrink}
-                        </li>
-                    })}
-                </ul>
-            </div>
-        )
-    }
-
-    componentDidMount() {
-        fetch(this.url)
+    useEffect(() => {
+        fetch(url)
             .then(resposta => resposta.json())
             .then(json => {
-                return this.setState({ dados: json.drinks })
+                console.log(json.drinks)
+                return setReqDrinks(json.drinks)
             })
-    }
+    }, [])
+
+    console.log(reqDrinks.length)
+    return (
+        <div style={{ margin: '0 auto' }}>
+            <h1>Drinks</h1>
+            <ul>
+                {reqDrinks.length < 1 ?
+                    'Carregando...' : 
+                    reqDrinks.map((item) => {
+                    return <li key={item.idDrink}>
+                        <img src={item.strDrinkThumb} alt={`Imagem do drink ${item.strDrink}`} width="100px" />
+                        <h5>{item.strDrink}</h5>
+                        <p>Categoria: {item.strCategory}</p>
+                        <p>ID: {item.idDrink}</p>
+                    </li>
+                })}
+            </ul>
+        </div>
+    )
 }
 
 export default Drinks

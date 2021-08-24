@@ -1,32 +1,26 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import style from './Button.module.css'
 
-class Button extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            disabled: false
-        }
-        this.meuClique = this.meuClique.bind(this)
-    }
+function Button(props) {
+    const { texto } = props
+    
+    const [isButtonDisabled, setButtonDisabled] = useState({ disabled: false })
 
-    meuClique() {
-        this.setState({ disabled: true })
+    function meuClique() {
+        setButtonDisabled({ disabled: true })
         
         setTimeout(() => {
-            this.setState({ disabled: false })
+            setButtonDisabled({ disabled: false })
         }, 3000)
     }
 
-    render() {
-        return (
-            <button disabled={this.state.disabled}
-                className={style.btn}
-                onClick={this.meuClique}>
-                    {this.props.texto}
-            </button>
-        )
-    }
+    return (
+        <button disabled={isButtonDisabled.disabled}
+            className={style.btn}
+            onClick={meuClique}>
+                {texto}
+        </button>
+    )
 }
 
 export default Button
