@@ -5,6 +5,7 @@ import Form from './components/Form/Form'
 import Footer from './components/Footer/Footer'
 import Drinks from './components/Drinks/Drinks'
 import Main from './components/Main/Main'
+import OurTeam from './components/OurTeam/OurTeam'
 import { 
   BrowserRouter as Router,
   Switch,
@@ -27,7 +28,7 @@ class App extends Component {
               <AboutUs />  
             </Route> 
             <Route path="/nosso-time">
-              <h1>Nosso time</h1>
+              <OurTeam />
             </Route>
             <Route path="/contato">
               <Form />
