@@ -6,7 +6,7 @@ function Form() {
   return (
     // importamos a classe do css do componente e para utilizar a classe do app.css usamos a notação de string e damos espaço para ter espaço entre eleas
     <main className={`${style.gridInterno} content`}>
-      <h1 className={style.titulo}>Olá Mundo!</h1>
+      <h1 className={style.titulo}>Contato</h1>
       {/* passando o src da imagem como variavel */}
       <img src={contactPic} className={style.col2img} alt="Typewriter"></img>
       <form className={style.form}>
