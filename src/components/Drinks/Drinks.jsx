@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 const Drinks = () => {
     const url = 'https://www.thecocktaildb.com/api/json/v1/1/random.php'
@@ -16,7 +17,6 @@ const Drinks = () => {
 
     // useEffect que roda no clique do botao
     useEffect(() => {
-        console.log('efeitooo rodou!');
         // valida se o estado trocaDrink eh true
         if(trocaDrink) {
             // faz a mesma request
@@ -27,7 +27,6 @@ const Drinks = () => {
                 })
         }
         return () => {
-            console.log('limpeza rodou')
             // na limpeza ele eh responsavel por devolver false como valor booleano
             setTrocaDrink(false)
         }
@@ -51,6 +50,16 @@ const Drinks = () => {
                 }}>
                 Trocar drink!
             </button>
+            <br />
+            
+            <div style={{ marginTop: '1rem'}}>
+            <Link to="/drinks/populares">
+                <button style={{ marginRight: '.3rem'}}>Drinks Populares</button>
+            </Link>
+            <Link to="/drinks/busca">
+                <button>Busca de drinks</button>
+            </Link>
+            </div>
         </div>
     )
 }
