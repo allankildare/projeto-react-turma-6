@@ -1,16 +1,29 @@
-import React, { useEffect } from 'react'
-import Button from '../Button/Button'
+import React, { useRef, useContext } from "react"
+import { UserContext } from "./../UserProvider/UserProvider"
 
 const OurTeam = () => {
-    useEffect(() => {
-        console.log('Rodei');
-    }, [])
+  const heading = useRef(null)
+  const inputName = useRef(null)
+  const { user, login } = useContext(UserContext)
 
-    return (
-        <div>
-            <Button texto="Turma 6" />
-        </div>
-    )
+  return (
+    <div>
+      <h1 className="centeredHeading" ref={heading}>
+        Nosso time
+      </h1>
+      <h2>Qual o seu nome?</h2>
+      <input type="text" ref={inputName} />
+      <button onClick={() => login(inputName.current.value)}>Login</button>
+
+      {user ? (
+        <p>
+          Seu nome é <b>{user}</b>
+        </p>
+      ) : (
+        <p>Você ainda não logou na página</p>
+      )}
+    </div>
+  )
 }
 
 export default OurTeam
